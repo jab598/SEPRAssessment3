@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ObjectiveHandler : MonoBehaviour {
 
-	//Singleton method. use ObjectHandler.inst.[etc]
+	//Singleton method. use ObjectHandler.instance.[etc]
 	private static ObjectiveHandler inst = null;
 	public static ObjectiveHandler instance {
 		get {
@@ -15,35 +16,29 @@ public class ObjectiveHandler : MonoBehaviour {
 		}
 	}
 
-	/// <summary>
-	/// The bio chem student object.
-	/// </summary>
-	public GameObject bioChemStudent;
+	public Text objectiveText;
 
 	/// <summary>
 	/// List of objectives
 	/// </summary>
-	public static List<Objective> objectives = new List<Objective> ();
+	public List<Objective> objectives = new List<Objective> ();
 
 	//called before Start(), before the scene loads
 	void Awake() {
 		//persist between scenes
 		Object.DontDestroyOnLoad (transform.gameObject);
+		UpdateUI ();
 	}
 
 	// Use this for initialization
 	void Start () {
 		//build the mission library
-		Objective coffeObj = new Objective ("getCoffee");
-		coffeObj.addPart ("collectCoffee");
-		coffeObj.addPart ("returnCoffee");
-		objectives.Add (coffeObj);
-
+		/*
 		Objective tubeObj = new Objective ("getTube");
 		tubeObj.addPart ("collectTube");
 		tubeObj.addPart ("returnTube");
 		objectives.Add (tubeObj);
-		Debug.Log ("Started objective handler");
+		Debug.Log ("Started objective handler");*/
 	}
 	
 	// Update is called once per frame
@@ -61,6 +56,7 @@ public class ObjectiveHandler : MonoBehaviour {
 				o.completeNextPart();
 			}
 		}
+		UpdateUI ();
 	}
 
 	/// <summary>
@@ -74,6 +70,7 @@ public class ObjectiveHandler : MonoBehaviour {
 				o.completePart(part);
 			}                        
 		}
+		UpdateUI ();
 	}
 
 	/// <summary>
@@ -95,5 +92,21 @@ public class ObjectiveHandler : MonoBehaviour {
 			}
 		}
 		return comp;
+	}
+
+	public void UpdateUI()
+	{
+		objectiveText = GameObject.FindGameObjectWithTag ("ObjectiveTextHolder").GetComponent<Text> ();
+		string text = "";
+		
+		foreach (Objective o in objectives)
+		{
+			//E.G Make Tea : Completed
+			text +=  o.name + " : " + (o.complete ? " Completed " : " Incomplete ");
+			text += "\n";
+		}
+		
+		objectiveText.text = text;
+		
 	}
 }

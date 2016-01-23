@@ -43,22 +43,6 @@ public class ActivateTextAtLine : MonoBehaviour
 
 	public void OnDialogFinishHandler()
 	{
-		var objectives = PlayerProperties.Player.GetComponent<Objectives> ();
-
-		if(assignObjective)
-		{
-			Timer.New (PlayerProperties.Player, 1.0f, () =>
-			{
-				objectives.AddObjective(assignObjectiveName);
-			});
-		}
-
-		if (completeObjective)
-		{
-			objectives.CompleteObjective (completeObjectiveName);
-
-		}
-
 		if (activateGameObject)
 		{
 			gameObjectToActivate.SetActive (true);

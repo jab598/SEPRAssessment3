@@ -50,7 +50,6 @@
      <Compile Include="Assets\Scripts\AI\FrogAI.cs" />
      <Compile Include="Assets\Scripts\AI\SeekerAI.cs" />
      <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
-     <Compile Include="Assets\Scripts\AddObjectiveOnStart.cs" />
      <Compile Include="Assets\Scripts\BiochemDialogFinish.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
@@ -75,9 +74,8 @@
      <Compile Include="Assets\Scripts\NearTrigger.cs" />
      <Compile Include="Assets\Scripts\Objectives\Objective.cs" />
      <Compile Include="Assets\Scripts\Objectives\ObjectiveHandler.cs" />
+     <Compile Include="Assets\Scripts\Objectives\ObjectiveIssue.cs" />
      <Compile Include="Assets\Scripts\Objectives\ObjectiveProgresser.cs" />
-     <Compile Include="Assets\Scripts\Objectives\Objectives.cs" />
-     <Compile Include="Assets\Scripts\ObjectivesUIManager.cs" />
      <Compile Include="Assets\Scripts\PauseManager.cs" />
      <Compile Include="Assets\Scripts\PlayerProperties.cs" />
      <Compile Include="Assets\Scripts\PowerupPickup.cs" />

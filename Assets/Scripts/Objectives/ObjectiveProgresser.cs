@@ -45,5 +45,6 @@ public class ObjectiveProgresser : MonoBehaviour {
 		} else if(!useSideCondition) {
 			ObjectiveHandler.instance.completeNextPart (missionName);
 		}
+		ObjectiveHandler.instance.UpdateUI ();
 	}
 }

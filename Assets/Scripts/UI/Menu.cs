@@ -51,6 +51,7 @@ public class Menu : MonoBehaviour {
 		updateFoodUI ();
 		updateWeaponUI ();
 		updatePowerupGUI ();
+		ObjectiveHandler.instance.UpdateUI ();
 	}
 
 
