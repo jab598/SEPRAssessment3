@@ -34,7 +34,7 @@ public class ObjectiveHandler : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//build the mission library
-		Objective coffeObj = new Objective ("getCoffee");;
+		Objective coffeObj = new Objective ("getCoffee");
 		coffeObj.addPart ("collectCoffee");
 		coffeObj.addPart ("returnCoffee");
 		objectives.Add (coffeObj);
@@ -43,6 +43,7 @@ public class ObjectiveHandler : MonoBehaviour {
 		tubeObj.addPart ("collectTube");
 		tubeObj.addPart ("returnTube");
 		objectives.Add (tubeObj);
+		Debug.Log ("Started objective handler");
 	}
 	
 	// Update is called once per frame

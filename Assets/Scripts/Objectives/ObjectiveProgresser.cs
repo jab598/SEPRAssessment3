@@ -42,7 +42,7 @@ public class ObjectiveProgresser : MonoBehaviour {
 			if (ObjectiveHandler.instance.checkPart (sideConditionMissionName, sideConditionMissionPart)) {
 				ObjectiveHandler.instance.completeNextPart (missionName);
 			}
-		} else {
+		} else if(!useSideCondition) {
 			ObjectiveHandler.instance.completeNextPart (missionName);
 		}
 	}

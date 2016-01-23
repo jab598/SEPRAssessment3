@@ -7,7 +7,7 @@ public class FireProjectile : MonoBehaviour {
 	
 	public bool mouseAim = true;
 
-	public float speed = 5.0f;
+	public float speed = 200.0f;
 
 	public float knockBackAmount = 0.4f;
 
