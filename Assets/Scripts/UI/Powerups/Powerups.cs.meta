@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 66b011101090649a59bc1f6b49f4e829
+timeCreated: 1453080772
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - run1Img: {fileID: 21300000, guid: c7c072d3363a9e749a77e5e92828035e, type: 3}
+  - run2Img: {fileID: 21300000, guid: 7eb3935cf1484944e88a3bfe59745b7c, type: 3}
+  - run3Img: {fileID: 21300000, guid: 70aab59d385eb54468d32b649d2ffaff, type: 3}
+  - health1Img: {fileID: 21300000, guid: 5a5f7821a948bc244b862dee6b37ee0e, type: 3}
+  - health2Img: {fileID: 21300000, guid: 8975dfd21f2e7ee4e9adf6b46d424e26, type: 3}
+  - health3Img: {fileID: 21300000, guid: 4a472340a838e734bbae0a17a4f18257, type: 3}
+  - prot1Img: {fileID: 21300000, guid: c055843d1c4dd3949b1c11fac788a29f, type: 3}
+  - prot2Img: {fileID: 21300000, guid: 345f5206eb5d13748b00ca76feab14fc, type: 3}
+  - prot3Img: {fileID: 21300000, guid: 397c2daf80a3aec4baa1a4ba800030e9, type: 3}
+  - points1Img: {instanceID: 0}
+  - points2Img: {instanceID: 0}
+  - points3Img: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

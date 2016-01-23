@@ -1,0 +1,25 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SwordSlashController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/ActivateTextAtLine.cs" Line="36" Column="26" />
+      <File FileName="Assets/Scripts/Objectives/Objectives.cs" Line="22" Column="4" />
+      <File FileName="Assets/Scripts/UI/Menu.cs" Line="36" Column="27" />
+      <File FileName="Assets/Text/BioChemDialogue.txt" Line="8" Column="31" />
+      <File FileName="Assets/Scripts/TextBoxManager.cs" Line="134" Column="30" />
+      <File FileName="Assets/Scripts/WarpOnStart.cs" Line="18" Column="47" />
+      <File FileName="Assets/Scripts/CannonSpawn.cs" Line="11" Column="3" />
+      <File FileName="Assets/Scripts/CannonBallImpact.cs" Line="15" Column="2" />
+      <File FileName="Assets/Scripts/SceneSwitcher.cs" Line="16" Column="2" />
+      <File FileName="Assets/Scripts/AI/SeekerAI.cs" Line="69" Column="1" />
+      <File FileName="Assets/Scripts/PlayerProperties.cs" Line="111" Column="27" />
+      <File FileName="Assets/Scripts/SwordSlashController.cs" Line="15" Column="25" />
+      <File FileName="Assets/Scripts/SimpleHP.cs" Line="44" Column="39" />
+      <File FileName="Assets/Scripts/FireProjectile.cs" Line="39" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
