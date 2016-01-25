@@ -1,6 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Text/ConstantineDialogue.txt">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Text/BioChemDialog3.txt">
     <Files>
       <File FileName="Assets/Scripts/Objectives/Objective.cs" Line="47" Column="21" />
       <File FileName="Assets/Scripts/UI/UIWeapons.cs" Line="1" Column="1" />
@@ -14,8 +14,9 @@
       <File FileName="Assets/Text/BioChemDialog2.txt" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CharacterMovement.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SceneSwitcher.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Objectives/FlashChildren.cs" Line="37" Column="39" />
+      <File FileName="Assets/Scripts/Objectives/FlashChildren.cs" Line="1" Column="1" />
       <File FileName="Assets/Text/ConstantineDialogue.txt" Line="7" Column="33" />
+      <File FileName="Assets/Text/BioChemDialog3.txt" Line="5" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
