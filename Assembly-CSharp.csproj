@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\KnockbackArgs.cs" />
      <Compile Include="Assets\Scripts\MouseRotate.cs" />
      <Compile Include="Assets\Scripts\NearTrigger.cs" />
+     <Compile Include="Assets\Scripts\Objectives\FlashChildren.cs" />
      <Compile Include="Assets\Scripts\Objectives\Objective.cs" />
      <Compile Include="Assets\Scripts\Objectives\ObjectiveHandler.cs" />
      <Compile Include="Assets\Scripts\Objectives\ObjectiveIssue.cs" />
