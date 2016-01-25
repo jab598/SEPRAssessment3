@@ -228,6 +228,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressOnCollision: 0
   progressOnTrigger: 1
+  destroyOnHit: 0
+  updatePlayerState: 0
+  updatedState: 
   missionName: getCoffee
   completeNextPart: 1
   useSideCondition: 0
@@ -2217,7 +2220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11482778, guid: 00ef22a002caf4ac79d9dfc44de9938f, type: 2}
       propertyPath: sceneName
-      value: Hes East
+      value: Hes East 1
       objectReference: {fileID: 0}
     - target: {fileID: 11482778, guid: 00ef22a002caf4ac79d9dfc44de9938f, type: 2}
       propertyPath: requiredPlayerState
