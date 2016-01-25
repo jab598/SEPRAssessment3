@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo Scenes/StartMenu.unity
   - enabled: 1
     path: Assets/Scenes/Demo Scenes/Cell.unity
-  - enabled: 0
-    path: Assets/Scenes/EastCampus.unity
-  - enabled: 0
-    path: Assets/Scenes/Main.unity
-  - enabled: 0
-    path: Assets/Scenes/RonCookeHub.unity
   - enabled: 1
     path: Assets/Scenes/Demo Scenes/RCH.unity
   - enabled: 1
     path: Assets/Scenes/Demo Scenes/Hes East 1.unity
   - enabled: 1
     path: Assets/Scenes/Demo Scenes/Cell Without Biochem.unity
+  - enabled: 1
+    path: Assets/Scenes/Demo Scenes/constantine.unity
+  - enabled: 1
+    path: Assets/Scenes/Demo Scenes/Hes East 2.unity
+  - enabled: 1
+    path: Assets/Scenes/Demo Scenes/langwith.unity

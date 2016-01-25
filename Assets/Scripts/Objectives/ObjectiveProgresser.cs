@@ -5,6 +5,10 @@ public class ObjectiveProgresser : MonoBehaviour {
 
 	public bool progressOnCollision = true;
 	public bool progressOnTrigger = false;
+	public bool destroyOnHit;
+
+	public bool updatePlayerState = false;
+	public string updatedState;
 
 	public string missionName;
 
@@ -45,6 +49,12 @@ public class ObjectiveProgresser : MonoBehaviour {
 		} else if(!useSideCondition) {
 			ObjectiveHandler.instance.completeNextPart (missionName);
 		}
+		if (updatePlayerState) {
+			PlayerProperties.Inst.curState = updatedState;
+		}
 		ObjectiveHandler.instance.UpdateUI ();
+		if(destroyOnHit) {
+			Destroy (this.gameObject);
+		}
 	}
 }
