@@ -18,8 +18,7 @@ public class PowerupPickup : MonoBehaviour
 			if(setState != "") {
 				PlayerProperties.Inst.curState = setState;
 			}
+			Destroy (gameObject);
 		}
-		
-		Destroy (gameObject);
 	}
 }

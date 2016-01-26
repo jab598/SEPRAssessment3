@@ -96,6 +96,9 @@ public class ObjectiveHandler : MonoBehaviour {
 
 	public void UpdateUI()
 	{
+		if (objectiveText == null) {
+			objectiveText = GameObject.FindGameObjectWithTag("ObjectiveTextHolder").GetComponent<Text>();
+		}
 		objectiveText = GameObject.FindGameObjectWithTag ("ObjectiveTextHolder").GetComponent<Text> ();
 		string text = "";
 		

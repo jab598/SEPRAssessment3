@@ -33,7 +33,7 @@ public class ObjectiveProgresser : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D c) {
 		if (progressOnTrigger) {
-			Debug.Log ("Triggered");
+			//Debug.Log ("Triggered");
 			if (c.transform.tag == "Player") {
 				Debug.Log ("Player trigger detected");
 				completePart ();

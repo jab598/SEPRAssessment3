@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo Scenes/Hes East 2.unity
   - enabled: 1
     path: Assets/Scenes/Demo Scenes/langwith.unity
+  - enabled: 1
+    path: Assets/Scenes/Demo Scenes/Hes East 3.unity

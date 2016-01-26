@@ -48,6 +48,9 @@ public class Menu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		food = GameObject.FindGameObjectWithTag ("Player").GetComponent<UIFood> ();
+		weapons = GameObject.FindGameObjectWithTag ("Player").GetComponent<UIWeapons> ();
+		powerups = GameObject.FindGameObjectWithTag ("Player").GetComponent<Powerups> ();
 		updateFoodUI ();
 		updateWeaponUI ();
 		updatePowerupGUI ();
