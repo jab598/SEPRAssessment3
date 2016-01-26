@@ -6,8 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Demo Scenes/StartMenu.unity
-  - enabled: 1
     path: Assets/Scenes/Demo Scenes/Cell.unity
   - enabled: 1
     path: Assets/Scenes/Demo Scenes/RCH.unity

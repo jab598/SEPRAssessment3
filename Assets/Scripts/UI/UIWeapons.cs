@@ -38,10 +38,12 @@ public class UIWeapons : MonoBehaviour {
 
 
 	void Awake () {
+		DontDestroyOnLoad (transform.gameObject);
 		currentWeapons.Add (new weapon ("Sword", 2, swordImg, true));
 		currentWeapons.Add (new weapon ("Fireball", 3, fireballImg, true));
 		currentWeapons.Add (new weapon ("Bow", 4, bowImg, false));
 		currentWeapons.Add (new weapon ("Magic", 5, magicImg, false));
+		weaponUIText = GameObject.FindGameObjectWithTag ("WeaponUIText").GetComponent<Text>();
 	}
 	
 	public void obtainWeapon(string name, int amount) {

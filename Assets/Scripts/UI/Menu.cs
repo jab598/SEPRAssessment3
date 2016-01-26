@@ -55,6 +55,7 @@ public class Menu : MonoBehaviour {
 		updateWeaponUI ();
 		updatePowerupGUI ();
 		ObjectiveHandler.instance.UpdateUI ();
+		//Object.DontDestroyOnLoad (transform.gameObject);
 	}
 
 

@@ -10,6 +10,8 @@ public class ObjectiveIssue : MonoBehaviour {
 	public string missionName;
 	public List<string> missionParts = new List<string>();
 
+	bool issued = false;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -22,12 +24,15 @@ public class ObjectiveIssue : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D c) {
 		if (issueOnTrigger) {
-			Objective newObj = new Objective (missionName);
-			foreach(string s in missionParts) {
-				newObj.addPart(s);
+			if (!issued) {
+				Objective newObj = new Objective (missionName);
+				foreach (string s in missionParts) {
+					newObj.addPart (s);
+				}
+				ObjectiveHandler.instance.objectives.Add (newObj);
+				ObjectiveHandler.instance.UpdateUI ();
+				issued = true;
 			}
-			ObjectiveHandler.instance.objectives.Add (newObj);
-			ObjectiveHandler.instance.UpdateUI();
 		}
 	}
 }

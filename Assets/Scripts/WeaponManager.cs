@@ -73,7 +73,7 @@ public class WeaponManager : MonoBehaviour {
 		_selectedWeaponName  =  weapons[_selectedWeaponIndex].name;
 		RefreshActiveWeapons ();
 
-		//Hack to integrate UI Code (UI Code needs refactoring).
+		//Hack to integrate UI Code
 		transform.parent.GetComponent<UIWeapons>().weaponUIText.text = _selectedWeaponName;
 	}
 

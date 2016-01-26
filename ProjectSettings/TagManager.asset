@@ -8,6 +8,7 @@ TagManager:
   - ground
   - UI
   - ObjectiveTextHolder
+  - WeaponUIText
   layers:
   - Default
   - TransparentFX

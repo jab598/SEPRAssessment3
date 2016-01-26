@@ -16,7 +16,7 @@ public class PowerupPickup : MonoBehaviour
 				col.gameObject.GetComponent<Powerups>().EnablePowerup(powerUpName);
 			}
 			if(setState != "") {
-				PlayerProperties.Inst.curState = setState;
+				col.gameObject.GetComponent<PlayerProperties>().curState = setState;
 			}
 			Destroy (gameObject);
 		}

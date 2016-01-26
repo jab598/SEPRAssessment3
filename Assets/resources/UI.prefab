@@ -64,7 +64,7 @@ GameObject:
   - 114: {fileID: 11498020}
   m_Layer: 5
   m_Name: wepons
-  m_TagString: Untagged
+  m_TagString: WeaponUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
