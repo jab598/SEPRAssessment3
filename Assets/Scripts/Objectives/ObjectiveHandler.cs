@@ -102,9 +102,6 @@ public class ObjectiveHandler : MonoBehaviour {
 		//Ensure that we have an objectiveText object.
 		if (objectiveText == null) {
 			objectiveText = GameObject.FindGameObjectWithTag ("ObjectiveTextHolder").GetComponent<Text> ();
-		} else {
-			//stop call
-			return 0;
 		}
 		string text = "";
 		//Build the Text and set it afterwards.
