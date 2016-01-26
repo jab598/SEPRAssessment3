@@ -94,14 +94,20 @@ public class ObjectiveHandler : MonoBehaviour {
 		return comp;
 	}
 
+	/// <summary>
+	/// Updates the UI to show the current objectives and states.
+	/// </summary>
 	public void UpdateUI()
 	{
+		//Ensure that we have an objectiveText object.
 		if (objectiveText == null) {
-			objectiveText = GameObject.FindGameObjectWithTag("ObjectiveTextHolder").GetComponent<Text>();
+			objectiveText = GameObject.FindGameObjectWithTag ("ObjectiveTextHolder").GetComponent<Text> ();
+		} else {
+			//stop call
+			return 0;
 		}
-		objectiveText = GameObject.FindGameObjectWithTag ("ObjectiveTextHolder").GetComponent<Text> ();
 		string text = "";
-		
+		//Build the Text and set it afterwards.
 		foreach (Objective o in objectives)
 		{
 			//E.G Make Tea : Completed

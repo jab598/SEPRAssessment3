@@ -490,6 +490,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressOnCollision: 0
   progressOnTrigger: 1
+  destroyOnHit: 0
+  updatePlayerState: 0
+  updatedState: 
   missionName: getCoffee
   completeNextPart: 1
   useSideCondition: 0
@@ -687,7 +690,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 356122436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -97.8000031, y: 303.100006, z: 0}
+  m_LocalPosition: {x: -97.8000031, y: 303.369995, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -705,6 +708,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressOnCollision: 0
   progressOnTrigger: 1
+  destroyOnHit: 0
+  updatePlayerState: 0
+  updatedState: 
   missionName: Escape the Maze!
   completeNextPart: 1
   useSideCondition: 0
