@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SceneSwitcher : MonoBehaviour 
@@ -18,7 +18,7 @@ public class SceneSwitcher : MonoBehaviour
 		if (other.transform.tag == "Player") {
 			if(PlayerProperties.Inst.curState == requiredPlayerState || requiredPlayerState == "") {
 				PlayerPrefs.SetString ("WarpName", gameObject.name);
-				Application.LoadLevel (sceneName);
+				SceneManager.LoadScene (sceneName);
 			}
 		}
 	}

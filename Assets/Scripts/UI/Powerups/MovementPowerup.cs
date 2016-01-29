@@ -11,13 +11,13 @@ public class MovementPowerup : Powerup
 		_speedModifier = speedModifier;
 	}
 
-	public override void Enabled (GameObject player)
+	public void Enabled (GameObject player)
 	{
 		var characterMovement = player.GetComponent<CharacterMovement> ();
 		characterMovement.speedModifier *= _speedModifier;
 	}
 
-	public override void Disabled (GameObject player)
+	public void Disabled (GameObject player)
 	{
 		var characterMovement = player.GetComponent<CharacterMovement> ();
 		characterMovement.speedModifier /= _speedModifier;

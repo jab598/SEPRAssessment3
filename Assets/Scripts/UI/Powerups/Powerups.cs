@@ -42,12 +42,12 @@ public class Powerups : MonoBehaviour
 		allPowerups.Add (new Powerup ("qua", "Quadruple Point Collection", points3Img, false));
 	}
 
-	public void EnablePowerup(string name)
+	public void EnablePowerup(int index)
 	{
-		var powerup = FindPowerup (name);
+		Powerup powerup = allPowerups[index];
 		powerup.available = true;
-		powerup.Enabled (PlayerProperties.Player);
-		enabledPowerups.Add (powerup);
+		//powerup.Enabled ();
+		//enabledPowerups.Add (powerup);
 
 		//FloatingTextManager.MakeFloatingText (transform, powerup.description, Color.blue, 2.0f);
 	}
@@ -56,7 +56,7 @@ public class Powerups : MonoBehaviour
 	{
 		var powerup = FindPowerup (name);
 		powerup.available = false;
-		powerup.Disabled (PlayerProperties.Player);
+		powerup.Disabled ();
 		enabledPowerups.Remove(powerup);
 	}
 
@@ -76,9 +76,11 @@ public class Powerups : MonoBehaviour
 
 	void Update()
 	{
+		/*
 		foreach (Powerup p in enabledPowerups)
 		{
 			p.PlayerUpdate(PlayerProperties.Player);
 		}
+		*/
 	}
 }
