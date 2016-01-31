@@ -2,6 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+ * 
+ * All new code
+ * 
+ * */
+
 /// <summary>
 /// Activates one child object at a time, giving a flashing line effect.
 /// </summary>

@@ -2,14 +2,30 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+ * 
+ * All new code
+ * 
+ * */
+
 public class ObjectiveIssue : MonoBehaviour {
 
+	/// <summary>
+	/// Issue objective on trigger?
+	/// </summary>
 	public bool issueOnTrigger = true;
-	public bool issueOnCollision = false;
 
+	/// <summary>
+	/// Name of the mission to issue
+	/// </summary>
 	public string missionName;
+
+	/// <summary>
+	/// Parts of the new mission
+	/// </summary>
 	public List<string> missionParts = new List<string>();
 
+	//Internal flag
 	bool issued = false;
 
 	// Use this for initialization
@@ -22,17 +38,17 @@ public class ObjectiveIssue : MonoBehaviour {
 	
 	}
 
+	//On trigger
 	void OnTriggerEnter2D(Collider2D c) {
-		if (issueOnTrigger) {
-			if (!issued) {
-				Objective newObj = new Objective (missionName);
-				foreach (string s in missionParts) {
-					newObj.addPart (s);
-				}
-				ObjectiveHandler.instance.objectives.Add (newObj);
-				ObjectiveHandler.instance.UpdateUI ();
-				issued = true;
+		//If not issued, make a new mission, add the parts, issue it and update the UI.
+		if (!issued) {
+			Objective newObj = new Objective (missionName);
+			foreach (string s in missionParts) {
+				newObj.addPart (s);
 			}
+			ObjectiveHandler.instance.objectives.Add (newObj);
+			ObjectiveHandler.instance.UpdateUI ();
+			issued = true;
 		}
 	}
 }

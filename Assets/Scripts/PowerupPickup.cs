@@ -12,6 +12,7 @@ public class PowerupPickup : MonoBehaviour
 		//when we hit a player, give them the powerup and change the current state of the player. then destroy the powerup.
 		if (col.transform.tag == "Player")
 		{
+			//Changed to include GetComponent
 			if(powerupIndex != null) {
 				col.gameObject.GetComponent<Powerups>().EnablePowerup(powerupIndex);
 			}

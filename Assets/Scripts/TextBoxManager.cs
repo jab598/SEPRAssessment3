@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEditor;
 using UnityEngine.UI; // allows to use Text type
 
 public class TextBoxManager : MonoBehaviour {

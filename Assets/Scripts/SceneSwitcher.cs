@@ -2,6 +2,12 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+/*
+ * 
+ * Updated for SceneManager.SwitchScene
+ * 
+ * */
+
 public class SceneSwitcher : MonoBehaviour 
 {
 	/// <summary>

@@ -7,6 +7,7 @@ public class FireProjectile : MonoBehaviour {
 	
 	public bool mouseAim = true;
 
+	//Changed default speed
 	public float speed = 200.0f;
 
 	public float knockBackAmount = 0.4f;
@@ -25,6 +26,8 @@ public class FireProjectile : MonoBehaviour {
 	public void Fire(float modifierValue = 1.0f)
 	{
 		/*
+		 * Moved to MovePosition instead of this Add Force implementation
+		 * 
 		Vector3 finalTarget;
 		if (mouseAim)
 		{

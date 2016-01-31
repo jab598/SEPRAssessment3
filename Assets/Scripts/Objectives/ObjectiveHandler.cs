@@ -3,6 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+/*
+ * 
+ * All new code
+ * 
+ * */
+
 public class ObjectiveHandler : MonoBehaviour {
 
 	//Singleton method. use ObjectHandler.instance.[etc]
@@ -32,13 +38,7 @@ public class ObjectiveHandler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//build the mission library
-		/*
-		Objective tubeObj = new Objective ("getTube");
-		tubeObj.addPart ("collectTube");
-		tubeObj.addPart ("returnTube");
-		objectives.Add (tubeObj);
-		Debug.Log ("Started objective handler");*/
+		
 	}
 	
 	// Update is called once per frame

@@ -76,6 +76,7 @@ public class Powerups : MonoBehaviour
 
 	void Update()
 	{
+		//Removed for performance issues. unconnditional loops in Update() are generally bad
 		/*
 		foreach (Powerup p in enabledPowerups)
 		{

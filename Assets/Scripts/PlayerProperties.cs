@@ -3,6 +3,12 @@ using UnityEngine.UI;
 using System.Collections;
 //using DG.Tweening;
 
+/*
+ * 
+ * Updated to support states
+ * 
+ * */
+
 public class PlayerProperties : MonoBehaviour {
 
 	public static PlayerProperties Inst { get; private set; }
