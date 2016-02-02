@@ -16,7 +16,7 @@ public class FoodPickup : MonoBehaviour
 	{
 		if (col.name == "Player")
 		{
-			col.gameObject.GetComponent<UIFood>().ObtainFood(foodName,1);
+			GameObject.FindGameObjectWithTag("Statics").GetComponent<UIFood>().ObtainFood(foodName,1);
 		}
 
 		Destroy (gameObject);

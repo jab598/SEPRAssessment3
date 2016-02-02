@@ -31,8 +31,8 @@ public class SeekerAI : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		_target = PlayerProperties.Player.transform;
-		_rigidBody = GetComponent<Rigidbody2D> ();
+		_target = GameObject.FindGameObjectWithTag ("Player").transform;
+		_rigidBody = gameObject.GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame

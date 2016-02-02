@@ -9,6 +9,7 @@ TagManager:
   - UI
   - ObjectiveTextHolder
   - WeaponUIText
+  - Statics
   layers:
   - Default
   - TransparentFX

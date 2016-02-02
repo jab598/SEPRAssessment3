@@ -27,7 +27,7 @@ public class Powerups : MonoBehaviour
 	
 	void Awake () 
 	{
-		Object.DontDestroyOnLoad (transform.gameObject);
+		Object.DontDestroyOnLoad (this);
 		allPowerups.Add (new MovementPowerup ("mv1", "Move 10% faster", run1Img, false, 1.1f));
 		allPowerups.Add (new MovementPowerup ("mv2", "Move 20% faster", run2Img, false, 1.2f));
 		allPowerups.Add (new MovementPowerup ("mv3", "Move 30% faster", run3Img, false, 1.3f));
@@ -44,8 +44,8 @@ public class Powerups : MonoBehaviour
 
 	public void EnablePowerup(int index)
 	{
-		Powerup powerup = allPowerups[index];
-		powerup.available = true;
+		allPowerups[index].available = true;
+		allPowerups[index].Enabled ();
 		//powerup.Enabled ();
 		//enabledPowerups.Add (powerup);
 

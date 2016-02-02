@@ -138,12 +138,14 @@ public class Menu : MonoBehaviour {
 	int currentFoodIndex = 0;
 	int currentWeaponIndex = 0;
 
+	bool initial = false;
+
 	// Use this for initialization
 	void Start () {
 		//Initialis the food, weapons and powerups vars, then update all UI.
-		food = GameObject.FindGameObjectWithTag ("Player").GetComponent<UIFood> ();
-		weapons = GameObject.FindGameObjectWithTag ("Player").GetComponent<UIWeapons> ();
-		powerups = GameObject.FindGameObjectWithTag ("Player").GetComponent<Powerups> ();
+		food = GameObject.FindGameObjectWithTag ("Statics").GetComponent<UIFood> ();
+		weapons = GameObject.FindGameObjectWithTag ("Statics").GetComponent<UIWeapons> ();
+		powerups = GameObject.FindGameObjectWithTag ("Statics").GetComponent<Powerups> ();
 		updateFoodUI ();
 		updateWeaponUI ();
 		updatePowerupGUI ();

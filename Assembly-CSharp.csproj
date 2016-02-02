@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\AI\FrogAI.cs" />
      <Compile Include="Assets\Scripts\AI\SeekerAI.cs" />
      <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
+     <Compile Include="Assets\Scripts\AudioBackLoop.cs" />
      <Compile Include="Assets\Scripts\BiochemDialogFinish.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
@@ -140,6 +141,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Text\BioChemDialog5.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Text\ConstantineDialogue.txt" />
