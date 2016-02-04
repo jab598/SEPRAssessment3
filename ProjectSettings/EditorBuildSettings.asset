@@ -25,3 +25,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main/ComputerScience.unity
   - enabled: 1
     path: Assets/Scenes/Main/Hes East 4.unity
+  - enabled: 1
+    path: Assets/Scenes/Main/LMB.unity
+  - enabled: 1
+    path: Assets/Scenes/Main/Goodricke.unity

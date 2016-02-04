@@ -149,14 +149,14 @@ public class Menu : MonoBehaviour {
 		updateFoodUI ();
 		updateWeaponUI ();
 		updatePowerupGUI ();
-		ObjectiveHandler.instance.UpdateUI ();
+		ObjectiveHandler.inst.UpdateUI ();
 		//Object.DontDestroyOnLoad (transform.gameObject);
 	}
 
 
 	private void LoadSettings()
 	{
-		difficultySlider.value = PlayerProperties.Inst.DificultyLevel;
+		difficultySlider.value = PlayerProperties.inst.DificultyLevel;
 	}
 
 	// Update is called once per frame
@@ -264,7 +264,7 @@ public class Menu : MonoBehaviour {
 	/// </summary>
 	public void DiffucultyChanged()
 	{
-		PlayerProperties.Inst.DificultyLevel = (int)difficultySlider.value;
+		PlayerProperties.inst.DificultyLevel = (int)difficultySlider.value;
 	}
 
 	/// <summary>

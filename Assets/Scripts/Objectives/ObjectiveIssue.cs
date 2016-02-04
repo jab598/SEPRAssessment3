@@ -46,8 +46,8 @@ public class ObjectiveIssue : MonoBehaviour {
 			foreach (string s in missionParts) {
 				newObj.addPart (s);
 			}
-			ObjectiveHandler.instance.objectives.Add (newObj);
-			ObjectiveHandler.instance.UpdateUI ();
+			ObjectiveHandler.inst.objectives.Add (newObj);
+			ObjectiveHandler.inst.UpdateUI ();
 			issued = true;
 		}
 	}

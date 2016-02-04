@@ -48,7 +48,7 @@ public class SeekerAI : MonoBehaviour
 		Vector2 joiningLine2D = new Vector2 (joiningLine.x, joiningLine.y);
 		
 		//Force in the direction of the joining line.
-		Vector2 forceVector = joiningLine2D.normalized * speed * (PlayerProperties.Inst.DificultyLevel + 1);
+		Vector2 forceVector = joiningLine2D.normalized * speed * (PlayerProperties.inst.DificultyLevel + 1);
 
 		string direction = Utils.MainDirectionString (joiningLine);
 

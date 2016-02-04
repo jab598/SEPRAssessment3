@@ -29,7 +29,7 @@ public class SimpleHP : MonoBehaviour
 	{
 		if (health <= 0)
 		{
-			PlayerProperties.Inst.Score += pointsOnKill;
+			PlayerProperties.inst.Score += pointsOnKill;
 			Destroy(this.gameObject);
 		}
 	}
@@ -44,7 +44,6 @@ public class SimpleHP : MonoBehaviour
 	//Take damage based on our resitance.
 	public void Hit()
 	{
-
 		health -= hitDamage;
 		FloatText (hitDamage);
 	}
@@ -58,6 +57,7 @@ public class SimpleHP : MonoBehaviour
 	}
 
 	public void alterHealth (int amount) {
+		Debug.Log (this.gameObject.name + " took damage, health is now " + health);
 		health = Mathf.Clamp (health + amount, 0, maxHealth);
 	}	
 }

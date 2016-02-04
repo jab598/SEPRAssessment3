@@ -4,28 +4,30 @@ using System.Collections;
 //using DG.Tweening;
 
 /*
- * 
+ * Assessment3
  * Updated to support states
+ * Updated to keep consistent and PROPER singleton behaviour
  * 
  * */
 
 public class PlayerProperties : MonoBehaviour {
 
-	public static PlayerProperties Inst { get; private set; }
 
-	public static GameObject Player { get { return Inst.gameObject; } }
+	public static PlayerProperties inst;
+
+	public static GameObject Player { get { return inst.gameObject; } }
 
 	public static Vector3 Position  
 	{
 		get 
 		{
-			if(Inst == null)
+			if(inst == null)
 			{
 				return new Vector3(0,0,0);
 			}
 			else 
 			{
-				return Inst.gameObject.transform.position; 
+				return inst.gameObject.transform.position; 
 			}
 		} 
 	}
@@ -62,12 +64,12 @@ public class PlayerProperties : MonoBehaviour {
 
 	public Text pointsText;
 
-
-
-
-	public PlayerProperties()
-	{
-		Inst = this;
+	void Awake() {
+		if (inst == null) {
+			inst = this;
+		} else {
+			Destroy (this);
+		}
 	}
 
 	// Use this for initialization

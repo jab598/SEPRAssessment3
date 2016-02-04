@@ -28,7 +28,7 @@ public class CameraShake : MonoBehaviour {
 
 		float proposedIntensity = 0.0f;
 
-		if (PlayerProperties.Inst.DificultyLevel > 2)
+		if (PlayerProperties.inst.DificultyLevel > 2)
 		{
 			proposedIntensity = intensity * 4.0f;
 		}

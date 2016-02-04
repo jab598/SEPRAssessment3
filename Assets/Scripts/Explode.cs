@@ -23,6 +23,7 @@ public class Explode : MonoBehaviour
 
 	public void MakeExplosionForce(float amount)
 	{
+		/*
 		radius = amount * radiusMultiplier;
 		damage = amount * damageMultiplier;
 		force  = amount * forceMultiplier;
@@ -32,21 +33,21 @@ public class Explode : MonoBehaviour
 
 		//Set the graphic to the same size.
 		gameObject.BroadcastMessage ("SetSize", radius, SendMessageOptions.DontRequireReceiver);
-
+*/
 		Vector3 pos = transform.position;
-		
+
 		Collider2D[] colliders = Physics2D.OverlapCircleAll (pos, radius);
 		
 		foreach (Collider2D collider in colliders)
 		{
 			collider.gameObject.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
-
+			/*
 			Rigidbody2D rb = collider.GetComponent<Rigidbody2D>();
 			
 			if(rb != null)
 			{
 				rb.AddExplosionForce(force, pos, radius);
-			}
+			}*/
 		}
 
 

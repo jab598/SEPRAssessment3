@@ -32,7 +32,7 @@ public class Objective {
 	//Initialise
 	public Objective(string nm) {
 		name = nm;
-		ObjectiveHandler.instance.UpdateUI ();
+		ObjectiveHandler.inst.UpdateUI ();
 	}
 
 	void Awake() {
@@ -58,7 +58,7 @@ public class Objective {
 		foreach(bool b in parts.Values) {
 			Debug.Log (b);
 		}*/
-		ObjectiveHandler.instance.UpdateUI ();
+		ObjectiveHandler.inst.UpdateUI ();
 	}
 
 	/// <summary>
@@ -69,7 +69,7 @@ public class Objective {
 			complete = true;
 			Debug.Log (name + " completed");
 		}
-		ObjectiveHandler.instance.UpdateUI ();
+		ObjectiveHandler.inst.UpdateUI ();
 	}
 
 	/// <summary>
@@ -81,7 +81,7 @@ public class Objective {
 		if (!parts.ContainsKey (s)) {
 			parts [s] = c;
 		}
-		ObjectiveHandler.instance.UpdateUI ();
+		ObjectiveHandler.inst.UpdateUI ();
 	}
 
 	/// <summary>
@@ -96,7 +96,7 @@ public class Objective {
 		} else {
 			Debug.Log ("The part " + s + " does not exist in the mission " + name);
 		}
-		ObjectiveHandler.instance.UpdateUI ();
+		ObjectiveHandler.inst.UpdateUI ();
 	}
 
 }

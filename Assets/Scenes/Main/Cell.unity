@@ -340,7 +340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 0}
   - {fileID: 503931139}
 --- !u!1 &223720217
 GameObject:
@@ -371,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3068ec2481fc4bfeaa4573a8bc01393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: RCH
+  sceneName: goodricke
   requiredPlayerState: 
 --- !u!61 &223720219
 BoxCollider2D:
@@ -576,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   issueOnTrigger: 1
-  missionName: getCoffee
+  missionName: Get the Coffee
   missionParts:
   - collectCoffee
   - returnCoffee
@@ -995,6 +994,7 @@ GameObject:
   - 114: {fileID: 1102485183}
   - 114: {fileID: 1102485185}
   - 114: {fileID: 1102485184}
+  - 114: {fileID: 1102485186}
   m_Layer: 0
   m_Name: STATICS
   m_TagString: Statics
@@ -1079,6 +1079,24 @@ MonoBehaviour:
   appleImg: {fileID: 21300000, guid: 5d156baa71dae0849a5841fd10210c17, type: 3}
   berryImg: {fileID: 21300000, guid: e9ac4f2d0e420f943a45492f82d185d3, type: 3}
   breadImg: {fileID: 21300000, guid: e2965614cb9289548a88f1232317165b, type: 3}
+--- !u!114 &1102485186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102485180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a76db80b70654588b7bbd6dfd578628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explodeColor: {r: 1, g: 1, b: 1, a: 0}
+  curState: 
+  DificultyLevel: 0
+  defaultHealth: 300
+  hitSound: {fileID: 8300000, guid: 978cd86e39884428085eb63886781475, type: 3}
+  healthUI: {fileID: 776583336}
+  pointsText: {fileID: 1365290990}
 --- !u!1 &1140158671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2863,12 +2881,10 @@ GameObject:
   - 61: {fileID: 1392344905}
   - 50: {fileID: 1392344895}
   - 114: {fileID: 1392344904}
-  - 114: {fileID: 1392344903}
   - 82: {fileID: 1392344902}
   - 114: {fileID: 1392344901}
   - 114: {fileID: 1392344900}
   - 114: {fileID: 1392344899}
-  - 114: {fileID: 1392344896}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2908,18 +2924,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1392344896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11485008, guid: ab75c0326661d4da8a5f1486ef5b92fd,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1392344893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f08106b82df94f6385afc6212b226a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1392344899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3040,25 +3044,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &1392344903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11475790, guid: ab75c0326661d4da8a5f1486ef5b92fd,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1392344893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a76db80b70654588b7bbd6dfd578628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explodeColor: {r: 1, g: 1, b: 1, a: 0}
-  curState: 
-  DificultyLevel: 0
-  defaultHealth: 300
-  hitSound: {fileID: 8300000, guid: 978cd86e39884428085eb63886781475, type: 3}
-  healthUI: {fileID: 776583336}
-  pointsText: {fileID: 1365290990}
 --- !u!114 &1392344904
 MonoBehaviour:
   m_ObjectHideFlags: 0

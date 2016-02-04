@@ -92,19 +92,19 @@ public class ObjectiveProgresser : MonoBehaviour {
 	void CompletePart() {
 		//If we use a side condition, check the side condition and complete the mission
 		if (useSideCondition) {
-			if (ObjectiveHandler.instance.checkPart (sideConditionMissionName, sideConditionMissionPart)) {
-				ObjectiveHandler.instance.completeNextPart (missionName);
+			if (ObjectiveHandler.inst.checkPart (sideConditionMissionName, sideConditionMissionPart)) {
+				ObjectiveHandler.inst.completeNextPart (missionName);
 			}
 			//Else, we arent using a side condition, so just complete the next part
 		} else if(!useSideCondition) {
-			ObjectiveHandler.instance.completeNextPart (missionName);
+			ObjectiveHandler.inst.completeNextPart (missionName);
 		}
 		//If we update the player state, do it
 		if (updatePlayerState) {
-			PlayerProperties.Inst.curState = updatedState;
+			PlayerProperties.inst.curState = updatedState;
 		}
 		//Update UI
-		ObjectiveHandler.instance.UpdateUI ();
+		ObjectiveHandler.inst.UpdateUI ();
 		//Destroy this if needed
 		if(destroyOnHit) {
 			Destroy (this.gameObject);

@@ -347,24 +347,6 @@ PolygonCollider2D:
 Transform:
   m_PrefabParentObject: {fileID: 477258, guid: 9cb50e2fc7c7943978878c7de338b8db, type: 2}
   m_PrefabInternal: {fileID: 3981588}
---- !u!1 &296922904 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 104976, guid: a394ed00fc243425fa42dde7bcd16832, type: 2}
-  m_PrefabInternal: {fileID: 98082358}
---- !u!114 &296922905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 296922904}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65cb1e438cf1740c585d9be89e697068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  issueOnTrigger: 0
-  missionName: 
-  missionParts: []
 --- !u!1 &387033827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1255,7 @@ Transform:
   m_Children:
   - {fileID: 911043032}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!60 &962316638
 PolygonCollider2D:
   m_ObjectHideFlags: 0

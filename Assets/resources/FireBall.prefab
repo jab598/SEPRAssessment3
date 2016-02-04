@@ -12,11 +12,10 @@ GameObject:
   - 50: {fileID: 5061848}
   - 61: {fileID: 6117396}
   - 114: {fileID: 11428106}
-  - 114: {fileID: 11466870}
   - 114: {fileID: 11472854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FireBall
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +30,7 @@ GameObject:
   - 4: {fileID: 425132}
   - 212: {fileID: 21269210}
   - 108: {fileID: 10828712}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 153.742905, y: -150.099945, z: -1.10000002}
-  m_LocalScale: {x: 1.77196527, y: 1.72596586, z: 1}
+  m_LocalPosition: {x: 153.7429, y: -150.09995, z: -1.1}
+  m_LocalScale: {x: 1.7719653, y: 1.7259659, z: 1}
   m_Children:
   - {fileID: 425132}
   m_Father: {fileID: 0}
@@ -59,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 135544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -6}
-  m_LocalScale: {x: 37.1818275, y: 37.1818275, z: 1.8590914}
+  m_LocalScale: {x: 37.181828, y: 37.181828, z: 1.8590914}
   m_Children: []
   m_Father: {fileID: 409720}
   m_RootOrder: 0
@@ -70,7 +69,8 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121404}
-  m_Mass: .0599999987
+  m_UseAutoMass: 0
+  m_Mass: 0.06
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -86,12 +86,13 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121404}
   m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 9.53674316e-07, y: -1.90734863e-06}
+  m_Offset: {x: 0.0000009536743, y: -0.0000019073486}
   serializedVersion: 2
-  m_Size: {x: 3.8900001, y: 4.32999992}
+  m_Size: {x: 3.89, y: 4.33}
 --- !u!108 &10828712
 Light:
   m_ObjectHideFlags: 1
@@ -101,17 +102,18 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: 1, g: .517241359, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.51724136, b: 0, a: 1}
   m_Intensity: 1
-  m_Range: 87.6987762
+  m_Range: 87.69878
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
     m_Strength: 1
-    m_Bias: .0500000007
-    m_NormalBias: .400000006
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -136,18 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeInSeconds: 10
---- !u!114 &11466870
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e588bd0ea0dae4a7f882f38bd0d9535f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionMagnitude: 1
 --- !u!114 &11472854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,14 +171,18 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 568079097
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c2486914679b14ba9a5ca4a1f1a00aa1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!212 &21269210
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -207,14 +201,18 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 568079097
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f487e85c189864144b7933d9561a1ced, type: 3}
-  m_Color: {r: .764705896, g: .319997579, b: .0787197053, a: 1}
+  m_Color: {r: 0.7647059, g: 0.31999758, b: 0.078719705, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -245,6 +243,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: fireballSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

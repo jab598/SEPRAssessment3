@@ -64,7 +64,7 @@ public class FireProjectile : MonoBehaviour {
 		Vector3 finalTarget = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		GameObject projectile = (GameObject)Instantiate (projectilePrefab, transform.position + transform.forward, transform.rotation);
 
-		projectile.GetComponent<Rigidbody2D> ().velocity = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized * speed;
+		projectile.GetComponent<Rigidbody2D> ().velocity = (finalTarget - transform.position).normalized * speed;
 
 	}
 

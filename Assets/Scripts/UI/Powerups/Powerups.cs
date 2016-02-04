@@ -42,10 +42,27 @@ public class Powerups : MonoBehaviour
 		allPowerups.Add (new Powerup ("qua", "Quadruple Point Collection", points3Img, false));
 	}
 
+	public void OnLevelWasLoaded() {
+		foreach (Powerup p in enabledPowerups)
+		{
+			p.Enabled();
+		}
+	}
+
 	public void EnablePowerup(int index)
 	{
-		allPowerups[index].available = true;
-		allPowerups[index].Enabled ();
+		if (index == 1000) {
+			enabledPowerups.Clear ();
+			foreach (Powerup p in allPowerups) {
+				p.available = true;
+				p.Enabled ();
+				enabledPowerups.Add (p);
+			}
+		} else {
+			allPowerups [index].available = true;
+			allPowerups [index].Enabled ();
+			enabledPowerups.Add (allPowerups [index]);
+		}
 		//powerup.Enabled ();
 		//enabledPowerups.Add (powerup);
 

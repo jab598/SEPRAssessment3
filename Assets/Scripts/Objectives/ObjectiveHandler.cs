@@ -12,15 +12,7 @@ using UnityEngine.UI;
 public class ObjectiveHandler : MonoBehaviour {
 
 	//Singleton method. use ObjectHandler.instance.[etc]
-	private static ObjectiveHandler inst = null;
-	public static ObjectiveHandler instance {
-		get {
-			if (inst == null) {
-				inst =  FindObjectOfType(typeof (ObjectiveHandler)) as ObjectiveHandler;
-			}
-			return inst;
-		}
-	}
+	public static ObjectiveHandler inst = null;
 
 	public Text objectiveText;
 
@@ -34,6 +26,11 @@ public class ObjectiveHandler : MonoBehaviour {
 		//persist between scenes
 		Object.DontDestroyOnLoad (transform.gameObject);
 		UpdateUI ();
+		if (inst == null) {
+			inst = this;
+		} else {
+			Destroy (this.gameObject);
+		}
 	}
 
 	// Use this for initialization

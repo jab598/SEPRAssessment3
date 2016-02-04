@@ -414,7 +414,7 @@ MonoBehaviour:
   destroyOnHit: 0
   updatePlayerState: 0
   updatedState: 
-  missionName: getCoffee
+  missionName: Get the Coffee
   completeNextPart: 1
   useSideCondition: 0
   sideConditionMissionName: getCoffee
@@ -1810,10 +1810,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
---- !u!1 &1742128269 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 176778, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
-  m_PrefabInternal: {fileID: 1795468018}
 --- !u!1001 &1795468018
 Prefab:
   m_ObjectHideFlags: 0
@@ -1868,11 +1864,11 @@ Prefab:
     - target: {fileID: 11408258, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
       propertyPath: weapons.Array.data[1]
       value: 
-      objectReference: {fileID: 1742128269}
+      objectReference: {fileID: 0}
     - target: {fileID: 11408258, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
       propertyPath: weapons.Array.data[0]
       value: 
-      objectReference: {fileID: 1742128269}
+      objectReference: {fileID: 0}
     - target: {fileID: 8218582, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
       propertyPath: panLevelCustomCurve.m_RotationOrder
       value: 0

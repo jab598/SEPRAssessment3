@@ -55,7 +55,7 @@ public class UIFood : MonoBehaviour {
 			if(f.name == name) {
 				if(f.amount > 0) {
 					f.amount -= 1;
-					PlayerProperties.Inst.IncreaseHealth(f.healAmount);
+					PlayerProperties.inst.IncreaseHealth(f.healAmount);
 				}
 			}
 		}

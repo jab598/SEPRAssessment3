@@ -301,7 +301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   issueOnTrigger: 1
-  issueOnCollision: 0
   missionName: Turn the servers on
   missionParts:
   - TurnedOn
@@ -1483,7 +1482,7 @@ MonoBehaviour:
   progressOnCollision: 0
   progressOnTrigger: 1
   destroyOnHit: 0
-  updatePlayerState: 0
+  updatePlayerState: 1
   updatedState: serverSet
   missionName: Turn the servers on
   completeNextPart: 1

@@ -10,6 +10,7 @@ TagManager:
   - ObjectiveTextHolder
   - WeaponUIText
   - Statics
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -20,10 +21,10 @@ TagManager:
   - 
   - 
   - Background
-  - 
-  - 
-  - 
-  - 
+  - Projectile
+  - Player
+  - Monster
+  - Terrain
   - 
   - 
   - 
