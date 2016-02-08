@@ -62,7 +62,8 @@ public class FireProjectile : MonoBehaviour {
 		knockBackRigidBody.AddForce (knockBackImpulseVector , ForceMode2D.Impulse);*/
 
 		Vector3 finalTarget = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		GameObject projectile = (GameObject)Instantiate (projectilePrefab, transform.position + transform.forward, transform.rotation);
+		Vector3 rot = finalTarget - transform.position;
+		GameObject projectile = (GameObject)Instantiate (projectilePrefab, transform.position + transform.forward, Quaternion.identity);
 
 		projectile.GetComponent<Rigidbody2D> ().velocity = (finalTarget - transform.position).normalized * speed;
 
