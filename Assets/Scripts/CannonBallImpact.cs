@@ -21,7 +21,7 @@ public class CannonBallImpact : MonoBehaviour {
 
 		if (coll.gameObject.name == "Player")
 		{
-			coll.gameObject.SendMessage ("TakeDamage", damage);
+			PlayerProperties.inst.TakeDamage (damage);
 			Destroy (gameObject);
 		}
 	}

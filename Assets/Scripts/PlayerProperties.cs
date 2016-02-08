@@ -55,6 +55,7 @@ public class PlayerProperties : MonoBehaviour {
 		set
 		{
 			_score = value;
+			Debug.Log ("PlayerProprtties recieved score ");
 			pointsText.text = value.ToString();
 
 		} 
@@ -81,6 +82,13 @@ public class PlayerProperties : MonoBehaviour {
 		Score = 0;
 	}
 
+	void OnLevelWasLoaded() {
+		healthUI = GameObject.FindGameObjectWithTag ("UI").GetComponent<DuckUI> ();
+		pointsText = GameObject.FindGameObjectWithTag ("pointsText").GetComponent<Text> ();
+		_audioSource = GetComponent<AudioSource> ();
+		DificultyLevel = PlayerPrefs.GetInt ("difficulty");
+		pointsText.text = _score.ToString();
+	}
 	
 	// Update is called once per frame
 	void Update ()

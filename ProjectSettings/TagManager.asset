@@ -11,6 +11,7 @@ TagManager:
   - WeaponUIText
   - Statics
   - Weapon
+  - pointsText
   layers:
   - Default
   - TransparentFX
