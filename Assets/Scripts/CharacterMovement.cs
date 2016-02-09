@@ -131,7 +131,7 @@ public class CharacterMovement : MonoBehaviour
 				updateSwimDirection *= slowPercentage;
 			}
 			currentSwimPos += updateSwimDirection;
-			currentSwimPos.x -= 0.7f;
+			currentSwimPos.x -= 1.2f;
 
 			_rigidBody.MovePosition (currentSwimPos);
 			return;
