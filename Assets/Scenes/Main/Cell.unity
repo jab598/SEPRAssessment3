@@ -311,8 +311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3068ec2481fc4bfeaa4573a8bc01393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: LMB
-  requiredPlayerState: 
+  sceneName: Goodricke
+  requiredPlayerState: RCH
 --- !u!61 &223720219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2824,6 +2824,7 @@ MonoBehaviour:
   slowPercentage: 0.55
   speedModifier: 1
   canMove: 1
+  isSwimming: 0
 --- !u!61 &1392344905
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -40,6 +40,8 @@ public class CharacterMovement : MonoBehaviour
 	// system)
 	public bool canMove;
 
+	public bool isSwimming = false;
+
 
 	void Start () 
 	{
@@ -113,6 +115,27 @@ public class CharacterMovement : MonoBehaviour
 			// executing if the player shouldn't move
 			// at the moment
 			return;
+		}
+		if (isSwimming) {
+			Vector2 currentSwimPos = transform.position;
+
+			_inputAxes.x = Input.GetAxis ("Horizontal");
+			_inputAxes.y = Input.GetAxis ("Vertical"); 
+
+			UpdateWalkDirection (_inputAxes);
+
+			Vector2 updateSwimDirection = _inputAxes * speed * speedModifier * 0.01f;
+
+			if (currentlySlowed)
+			{
+				updateSwimDirection *= slowPercentage;
+			}
+			currentSwimPos += updateSwimDirection;
+			currentSwimPos.x -= 0.7f;
+
+			_rigidBody.MovePosition (currentSwimPos);
+			return;
+
 		}
 
 		Vector2 currentPos = transform.position;
