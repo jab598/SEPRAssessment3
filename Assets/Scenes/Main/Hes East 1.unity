@@ -2629,6 +2629,7 @@ MonoBehaviour:
   slowPercentage: 0.55
   speedModifier: 1
   canMove: 1
+  isSwimming: 0
 --- !u!50 &1711436890
 Rigidbody2D:
   serializedVersion: 2

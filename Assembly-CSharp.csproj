@@ -94,6 +94,7 @@
      <Compile Include="Assets\Scripts\TextBoxManager.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\UI\DuckUI.cs" />
+     <Compile Include="Assets\Scripts\UI\EndGame.cs" />
      <Compile Include="Assets\Scripts\UI\Menu.cs" />
      <Compile Include="Assets\Scripts\UI\Powerups\MovementPowerup.cs" />
      <Compile Include="Assets\Scripts\UI\Powerups\Powerup.cs" />

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 //using DG.Tweening;
 
 /*
@@ -152,8 +153,11 @@ public class PlayerProperties : MonoBehaviour {
 
 	public void TakeDamage(float amount)
 	{
-		MakeDamageText (-amount);
+		//MakeDamageText (-amount);
 		_health -= amount;
+		if (_health <= 0) {
+			Dead ();
+		}
 	}
 
 	public void IncreaseHealth(float amount)
@@ -178,5 +182,10 @@ public class PlayerProperties : MonoBehaviour {
 	void OnApplicationQuit() 
 	{
 		SaveProperties ();
+	}
+
+	void Dead() {
+		SceneManager.LoadScene ("Cell");
+		Destroy (GameObject.FindGameObjectWithTag ("Statics"));
 	}
 }

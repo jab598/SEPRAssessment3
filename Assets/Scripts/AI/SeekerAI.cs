@@ -89,5 +89,13 @@ public class SeekerAI : MonoBehaviour
 		//Repel self from enemy.
 		_rigidBody.AddForce (-distance*repelance); 
 	}
+
+	//Added ASSESSMENT 3
+	void OnCollisionEnter2D(Collision2D c) {
+		if (c.transform.tag == "Player") {
+			PlayerProperties.inst.TakeDamage (10);
+			Destroy (this.gameObject);
+		}
+	}
 	
 }

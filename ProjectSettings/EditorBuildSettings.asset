@@ -29,3 +29,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Main/LMB.unity
   - enabled: 1
     path: Assets/Scenes/Main/Goodricke.unity
+  - enabled: 1
+    path: Assets/Scenes/Main/EndGameComplete.unity
