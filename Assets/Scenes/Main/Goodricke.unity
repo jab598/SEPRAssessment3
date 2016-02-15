@@ -131,56 +131,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 282582b177f8b4f8085487231011da79, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &232607096
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 412398, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 829
-      objectReference: {fileID: 0}
-    - target: {fileID: 412398, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -856
-      objectReference: {fileID: 0}
-    - target: {fileID: 412398, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 412398, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 412398, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 412398, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 412398, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 412398, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 168310, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_Name
-      value: goodrickeMonsterEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 168310, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d9e8cffe3adf5441381e15cf03f3ca60, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &350415551
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!4 &527686263 stripped
 Transform:
   m_PrefabParentObject: {fileID: 407846, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
@@ -434,7 +384,7 @@ Transform:
   m_LocalScale: {x: 17.226202, y: 435.95993, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &669664154
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +548,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!114 &944102346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,7 +714,7 @@ Transform:
   m_LocalScale: {x: 15.122951, y: 404.41306, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &1201533573 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 104976, guid: a394ed00fc243425fa42dde7bcd16832, type: 2}
@@ -830,6 +780,10 @@ Prefab:
     - target: {fileID: 21228404, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
       propertyPath: m_SortingLayerID
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432144, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: isSwimming
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
@@ -943,7 +897,7 @@ GameObject:
   - 212: {fileID: 1629165459}
   - 60: {fileID: 1629165461}
   m_Layer: 12
-  m_Name: goodricke
+  m_Name: pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -990,7 +944,7 @@ Transform:
   m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!60 &1629165461
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1087,7 +1041,7 @@ Transform:
   m_LocalScale: {x: 15.123094, y: 438.06314, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!114 &1669822066 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11477668, guid: ab75c0326661d4da8a5f1486ef5b92fd,
@@ -1247,4 +1201,4 @@ Transform:
   m_LocalScale: {x: 23.53556, y: 438.06308, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12

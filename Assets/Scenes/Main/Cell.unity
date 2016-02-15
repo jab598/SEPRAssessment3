@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3068ec2481fc4bfeaa4573a8bc01393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: RCH
+  sceneName: Goodricke
   requiredPlayerState: 
 --- !u!61 &223720219
 BoxCollider2D:
@@ -497,6 +497,14 @@ Prefab:
       propertyPath: defaultCameraSize
       value: 124
       objectReference: {fileID: 0}
+    - target: {fileID: 11400580, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 776583336}
+    - target: {fileID: 11400580, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: pointsText
+      value: 
+      objectReference: {fileID: 1365290990}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
   m_IsPrefabParent: 0

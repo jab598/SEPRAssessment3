@@ -68,6 +68,7 @@ public class Objective {
 		if (!parts.ContainsValue (false)) {
 			complete = true;
 			Debug.Log (name + " completed");
+			PlayerProperties.inst.Score += 100;
 		}
 		ObjectiveHandler.inst.UpdateUI ();
 	}

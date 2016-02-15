@@ -140,8 +140,7 @@ public class CharacterMovement : MonoBehaviour
 
 			Vector2 updateSwimDirection = _inputAxes * speed * speedModifier * 0.01f;
 
-			if (currentlySlowed)
-			{
+			if (currentlySlowed) {
 				updateSwimDirection *= slowPercentage;
 			}
 			currentSwimPos += updateSwimDirection;
@@ -150,24 +149,24 @@ public class CharacterMovement : MonoBehaviour
 			_rigidBody.MovePosition (currentSwimPos);
 			return;
 
+		} else {
+
+			Vector2 currentPos = transform.position;
+
+			_inputAxes.x = Input.GetAxis ("Horizontal");
+			_inputAxes.y = Input.GetAxis ("Vertical"); 
+
+			UpdateWalkDirection (_inputAxes);
+
+			Vector2 updateDirection = _inputAxes * speed * speedModifier * 0.01f;
+
+			if (currentlySlowed) {
+				updateDirection *= slowPercentage;
+			}
+			currentPos += updateDirection;
+
+			_rigidBody.MovePosition (currentPos);
 		}
-
-		Vector2 currentPos = transform.position;
-
-		_inputAxes.x = Input.GetAxis ("Horizontal");
-		_inputAxes.y = Input.GetAxis ("Vertical"); 
-
-		UpdateWalkDirection (_inputAxes);
-
-		Vector2 updateDirection = _inputAxes * speed * speedModifier * 0.01f;
-
-		if (currentlySlowed)
-		{
-			updateDirection *= slowPercentage;
-		}
-		currentPos += updateDirection;
-
-		_rigidBody.MovePosition (currentPos);
 	}
 
 	public void StartSwimming()
