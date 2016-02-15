@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3068ec2481fc4bfeaa4573a8bc01393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Goodricke
+  sceneName: Hes East 1
   requiredPlayerState: 
 --- !u!61 &223720219
 BoxCollider2D:
