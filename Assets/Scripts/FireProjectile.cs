@@ -61,10 +61,14 @@ public class FireProjectile : MonoBehaviour {
 
 		knockBackRigidBody.AddForce (knockBackImpulseVector , ForceMode2D.Impulse);*/
 
-		Vector3 finalTarget = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		Vector3 rot = finalTarget - transform.position;
-		GameObject projectile = (GameObject)Instantiate (projectilePrefab, transform.position + transform.forward, Quaternion.identity);
 
+		//The position that the player clicked
+		Vector3 finalTarget = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		//the vector to that target from the player
+		Vector3 rot = finalTarget - transform.position;
+		//create projectile infront of the player
+		GameObject projectile = (GameObject)Instantiate (projectilePrefab, transform.position + transform.forward, Quaternion.identity);
+		//set this projectiles velocity to the normalised previously calculated direction, modified by speed accordingly.
 		projectile.GetComponent<Rigidbody2D> ().velocity = (finalTarget - transform.position).normalized * speed;
 
 	}
