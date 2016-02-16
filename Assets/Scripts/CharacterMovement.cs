@@ -73,7 +73,7 @@ public class CharacterMovement : MonoBehaviour
 	/// </summary>
 	/// <returns><c>true</c> if this instance is flying; otherwise, <c>false</c>.</returns>
 	bool IsFlying() {
-		return (speedModifier >= 1.1f);
+		return (speedModifier >= 1.2f);
 	}
 
 	void UpdateWalkDirection( Vector2 input)
