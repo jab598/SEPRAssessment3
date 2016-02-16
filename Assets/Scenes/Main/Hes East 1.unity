@@ -419,7 +419,7 @@ MonoBehaviour:
   useSideCondition: 0
   sideConditionMissionName: getCoffee
   sideConditionPreviousPart: 0
-  sideConditionMissionPart: collectCoffee
+  sideConditionMissionPart: Get the Coffee
 --- !u!4 &308127025 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400676, guid: 00ef22a002caf4ac79d9dfc44de9938f, type: 2}

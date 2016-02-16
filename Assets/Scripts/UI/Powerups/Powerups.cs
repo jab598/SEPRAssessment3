@@ -31,15 +31,19 @@ public class Powerups : MonoBehaviour
 		allPowerups.Add (new MovementPowerup ("mv1", "Move 10% faster", run1Img, false, 1.1f));
 		allPowerups.Add (new MovementPowerup ("mv2", "Move 20% faster", run2Img, false, 1.2f));
 		allPowerups.Add (new MovementPowerup ("mv3", "Move 30% faster", run3Img, false, 1.3f));
-		allPowerups.Add (new Powerup ("hp1", "+10% Health", health1Img, false));
-		allPowerups.Add (new Powerup ("hp2", "+20% Health", health2Img, false));
-		allPowerups.Add (new Powerup ("hp3", "+30% Health", health3Img, false));
+		allPowerups.Add (new HealthPowerup ("hp1", "+10% Health", health1Img, false, 0.1f));
+		allPowerups.Add (new HealthPowerup ("hp2", "+20% Health", health2Img, false, 0.1f));
+		allPowerups.Add (new HealthPowerup ("hp3", "+30% Health", health3Img, false, 0.1f));
 		allPowerups.Add (new Powerup ("pe2", "+25% Protection from Enemies", prot1Img, false));
 		allPowerups.Add (new Powerup ("pe5", "+50% Protection from Enemies", prot2Img, false));
 		allPowerups.Add (new Powerup ("imo", "Immortality", prot3Img, false));
+
+		/*
+		 * Removed points multiplier powerups as they are too overpowered compaired to the rest.
 		allPowerups.Add (new Powerup ("dbl", "Double Point Collection", points1Img, false));
 		allPowerups.Add (new Powerup ("trp", "Triple Point Collection", points2Img, false));
 		allPowerups.Add (new Powerup ("qua", "Quadruple Point Collection", points3Img, false));
+		*/
 	}
 
 	public void OnLevelWasLoaded() {

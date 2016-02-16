@@ -66,7 +66,7 @@ public class WeaponManager : MonoBehaviour {
 
 	void SelectWeaponIndex(int i)
 	{
-		_selectedWeaponIndex = Mathf.Clamp (i, 0, weapons.Length);
+		_selectedWeaponIndex = Mathf.Clamp (i, 0, weapons.Length-1);
 		_selectedWeaponName  =  weapons[_selectedWeaponIndex].name;
 		Debug.Log ("Selecting weapon " + _selectedWeaponIndex);
 		RefreshActiveWeapons ();

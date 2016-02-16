@@ -130,6 +130,7 @@ public class CharacterMovement : MonoBehaviour
 			// at the moment
 			return;
 		}
+		//ASSESSMENT 3 - Added swimming functionality.
 		if (isSwimming) {
 			Vector2 currentSwimPos = transform.position;
 

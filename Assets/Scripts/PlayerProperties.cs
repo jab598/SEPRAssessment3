@@ -39,7 +39,9 @@ public class PlayerProperties : MonoBehaviour {
 
 	public int DificultyLevel;
 
-	public float defaultHealth = 300;
+	public float defaultHealth = 100;
+	float shealth;//startHealth
+	public float healthMultiplier = 1.0f;
 	public AudioClip hitSound;
 
 	private AudioSource _audioSource;
@@ -56,7 +58,7 @@ public class PlayerProperties : MonoBehaviour {
 		set
 		{
 			_score = value;
-			Debug.Log ("PlayerProprtties recieved score ");
+			//Debug.Log ("PlayerProprtties recieved score ");
 			pointsText.text = value.ToString();
 
 		} 
@@ -69,9 +71,8 @@ public class PlayerProperties : MonoBehaviour {
 	void Awake() {
 		if (inst == null) {
 			inst = this;
-		} else {
-			Destroy (this);
 		}
+		shealth = defaultHealth;
 	}
 
 	// Use this for initialization
@@ -80,7 +81,7 @@ public class PlayerProperties : MonoBehaviour {
 		_health = defaultHealth;
 		_audioSource = GetComponent<AudioSource> ();
 		DificultyLevel = PlayerPrefs.GetInt ("difficulty");
-		Score = 0;
+		//Score = 0;
 	}
 
 	void OnLevelWasLoaded() {
@@ -107,6 +108,8 @@ public class PlayerProperties : MonoBehaviour {
 		{
 			_health = defaultHealth;
 		}
+		defaultHealth = shealth * healthMultiplier;
+		//≥≤Debug.Log (Time.time + "    " + this.gameObject + _score);
 	}
 
 	void Die()

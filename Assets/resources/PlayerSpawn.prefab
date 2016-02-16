@@ -81,7 +81,6 @@ GameObject:
   - 61: {fileID: 6137418}
   - 50: {fileID: 5087484}
   - 114: {fileID: 11432144}
-  - 114: {fileID: 11400580}
   - 82: {fileID: 8218582}
   - 114: {fileID: 11457654}
   - 114: {fileID: 11493916}
@@ -351,7 +350,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 432640}
-  - 114: {fileID: 11449556}
   m_Layer: 0
   m_Name: CameraContainer
   m_TagString: Untagged
@@ -519,7 +517,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -339.4, y: 384.4, z: 0}
+  m_LocalPosition: {x: 33.37842, y: 19.946156, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22487176}
@@ -612,7 +610,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 124
+  orthographic size: 113.1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1227,24 +1225,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &11400580
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a76db80b70654588b7bbd6dfd578628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explodeColor: {r: 1, g: 1, b: 1, a: 0}
-  curState: 
-  DificultyLevel: 0
-  defaultHealth: 300
-  hitSound: {fileID: 8300000, guid: 978cd86e39884428085eb63886781475, type: 3}
-  healthUI: {fileID: 0}
-  pointsText: {fileID: 0}
 --- !u!114 &11405822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1438,17 +1418,6 @@ MonoBehaviour:
   chargeLowPass: {fileID: 16973442}
   startFrequency: 400
   finishFrequency: 5000
---- !u!114 &11449556
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e100fd234d93425baafadf5846b27ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11457654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1590,7 +1559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 407846}
-  defaultCameraSize: 150
+  defaultCameraSize: 124
 --- !u!114 &11493916
 MonoBehaviour:
   m_ObjectHideFlags: 1
