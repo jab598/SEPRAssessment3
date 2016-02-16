@@ -20,17 +20,17 @@ public class Powerup
 	}
 
 	//What to do to the player when the powerup first takes effect.
-	public virtual void Enabled(GameObject player)
+	public virtual void Enabled()
 	{
 	}
 
 	//What to do to the player when the powerup stops taking effect.
-	public virtual void Disabled(GameObject player)
+	public virtual void Disabled()
 	{
 	}
 
 	//What to do to the player continuously while the powerup is enabled.
-	public virtual void PlayerUpdate(GameObject player)
+	public virtual void PlayerUpdate ()//GameObject player)
 	{
 	}
 	

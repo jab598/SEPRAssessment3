@@ -9,6 +9,10 @@ using System.Collections.Generic;
 /// 
 /// It will also save and retrieve the selected weapon on scene switch.
 /// 
+/// ASSESSMENT3
+/// Re-worked so it actually works properly, as you would expect.
+/// All weapons are present at the start
+/// 
 /// </summary>
 public class WeaponManager : MonoBehaviour {
 		
@@ -41,15 +45,8 @@ public class WeaponManager : MonoBehaviour {
 	{
 		for (int i = 0; i < weapons.Length; i++)
 		{
-			//check weather this is the weapon that we want
-			bool isSelectedWeapon = weapons[i].name == _selectedWeaponName;
 			//update all of the weapon actives, so [true, false, false, false] if weap1
-			weapons[i].SetActive(isSelectedWeapon);
-			//set the current index of the selected weapon
-			if(isSelectedWeapon)
-			{
-				_selectedWeaponIndex = i;
-			}
+			weapons[i].SetActive(i == _selectedWeaponIndex);
 		}
 	}
 
@@ -69,11 +66,12 @@ public class WeaponManager : MonoBehaviour {
 
 	void SelectWeaponIndex(int i)
 	{
-		_selectedWeaponIndex = Mathf.Clamp (_selectedWeaponIndex, 0, weapons.Length - 1);
+		_selectedWeaponIndex = Mathf.Clamp (i, 0, weapons.Length-1);
 		_selectedWeaponName  =  weapons[_selectedWeaponIndex].name;
+		Debug.Log ("Selecting weapon " + _selectedWeaponIndex);
 		RefreshActiveWeapons ();
 
-		//Hack to integrate UI Code (UI Code needs refactoring).
+		//Hack to integrate UI Code
 		transform.parent.GetComponent<UIWeapons>().weaponUIText.text = _selectedWeaponName;
 	}
 

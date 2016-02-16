@@ -31,8 +31,8 @@ public class SeekerAI : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		_target = PlayerProperties.Player.transform;
-		_rigidBody = GetComponent<Rigidbody2D> ();
+		_target = GameObject.FindGameObjectWithTag ("Player").transform;
+		_rigidBody = gameObject.GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
@@ -48,7 +48,7 @@ public class SeekerAI : MonoBehaviour
 		Vector2 joiningLine2D = new Vector2 (joiningLine.x, joiningLine.y);
 		
 		//Force in the direction of the joining line.
-		Vector2 forceVector = joiningLine2D.normalized * speed * (PlayerProperties.Inst.DificultyLevel + 1);
+		Vector2 forceVector = joiningLine2D.normalized * speed * (PlayerProperties.inst.DificultyLevel + 1);
 
 		string direction = Utils.MainDirectionString (joiningLine);
 
@@ -88,6 +88,14 @@ public class SeekerAI : MonoBehaviour
 
 		//Repel self from enemy.
 		_rigidBody.AddForce (-distance*repelance); 
+	}
+
+	//Added ASSESSMENT 3
+	void OnCollisionEnter2D(Collision2D c) {
+		if (c.transform.tag == "Player") {
+			PlayerProperties.inst.TakeDamage (10);
+			Destroy (this.gameObject);
+		}
 	}
 	
 }

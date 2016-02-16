@@ -7,7 +7,8 @@ public class FireProjectile : MonoBehaviour {
 	
 	public bool mouseAim = true;
 
-	public float speed = 5.0f;
+	//Changed default speed
+	public float speed = 200.0f;
 
 	public float knockBackAmount = 0.4f;
 
@@ -25,6 +26,8 @@ public class FireProjectile : MonoBehaviour {
 	public void Fire(float modifierValue = 1.0f)
 	{
 		/*
+		 * Moved to MovePosition instead of this Add Force implementation
+		 * 
 		Vector3 finalTarget;
 		if (mouseAim)
 		{
@@ -58,10 +61,15 @@ public class FireProjectile : MonoBehaviour {
 
 		knockBackRigidBody.AddForce (knockBackImpulseVector , ForceMode2D.Impulse);*/
 
-		Vector3 finalTarget = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		GameObject projectile = (GameObject)Instantiate (projectilePrefab, transform.position + transform.forward, transform.rotation);
 
-		projectile.GetComponent<Rigidbody2D> ().velocity = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized * speed;
+		//The position that the player clicked
+		Vector3 finalTarget = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		//the vector to that target from the player
+		Vector3 rot = finalTarget - transform.position;
+		//create projectile infront of the player
+		GameObject projectile = (GameObject)Instantiate (projectilePrefab, transform.position + transform.forward, Quaternion.identity);
+		//set this projectiles velocity to the normalised previously calculated direction, modified by speed accordingly.
+		projectile.GetComponent<Rigidbody2D> ().velocity = (finalTarget - transform.position).normalized * speed;
 
 	}
 

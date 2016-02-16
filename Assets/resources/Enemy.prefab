@@ -76,8 +76,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -192.185715, y: -113.619705, z: 0}
-  m_LocalScale: {x: 5.87977886, y: 5.87980318, z: 5.87980318}
+  m_LocalPosition: {x: 229.25427, y: 99.463135, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
   - {fileID: 497786}
   - {fileID: 461818}
@@ -90,8 +90,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.163000003, y: 0, z: 0}
-  m_LocalScale: {x: .629999995, y: .170073718, z: .170073718}
+  m_LocalPosition: {x: -0.163, y: 0, z: 0}
+  m_LocalScale: {x: 0.63, y: 0.17007372, z: 0.17007372}
   m_Children: []
   m_Father: {fileID: 497786}
   m_RootOrder: 0
@@ -114,7 +114,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.648999989, y: -.839999974, z: 0}
+  m_LocalPosition: {x: -0.649, y: -0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 457720}
@@ -127,14 +127,15 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138868}
-  m_Mass: .239999995
-  m_LinearDrag: 2.93000007
-  m_AngularDrag: 2.43000007
-  m_GravityScale: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.24
+  m_LinearDrag: 2.93
+  m_AngularDrag: 2.43
+  m_GravityScale: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &6172384
 BoxCollider2D:
@@ -143,12 +144,13 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138868}
   m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0199999996, y: .0199999996}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.25}
+  m_Size: {x: 1, y: 1}
 --- !u!61 &6197434
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -156,6 +158,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167728}
   m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
@@ -237,14 +240,18 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1143681995
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d90a8faf6fb9540b084ef2825cc3a5dc, type: 3}
-  m_Color: {r: 0, g: .691176474, b: .233570069, a: 1}
+  m_Color: {r: 0, g: 0.6911765, b: 0.23357007, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!212 &21288024
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -263,14 +270,18 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 568079097
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5aefab9a734d04a04af905924971ad5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -284,6 +295,34 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -13,7 +13,7 @@ public class UIFood : MonoBehaviour {
 		public Sprite img;
 
 		/// <summary>
-		/// Initializes a food
+		/// Initializes a food.
 		/// </summary>
 		/// <param name="n">Name of the food</param>
 		/// <param name="a">Amount of food </param>
@@ -29,18 +29,28 @@ public class UIFood : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// The current foods.
+	/// </summary>
 	public List<food> currentFoods = new List<food>();
 
+	//images of food
 	public Sprite appleImg;
 	public Sprite berryImg;
 	public Sprite breadImg;
 
 	void Awake () {
+		Object.DontDestroyOnLoad (transform.gameObject);
 		currentFoods.Add (new food ("Apple", 2, 50, 2, appleImg));
 		currentFoods.Add (new food ("Berries", 30, 1, 3, berryImg));
 		currentFoods.Add (new food ("Bread", 4, 10, 5, breadImg));
 	}
 
+	/// <summary>
+	/// Obtains a food.
+	/// </summary>
+	/// <param name="name">Name of food.</param>
+	/// <param name="amount">Amount.</param>
 	public void ObtainFood(string name, int amount) {
 		foreach (food f in currentFoods) {
 			if(f.name == name) {
@@ -48,13 +58,17 @@ public class UIFood : MonoBehaviour {
 			}
 		}
 	}
-	
+
+	/// <summary>
+	/// Eat the specified name.
+	/// </summary>
+	/// <param name="name">Name of food.</param>
 	public void Eat(string name) {
 		foreach (food f in currentFoods) {
 			if(f.name == name) {
 				if(f.amount > 0) {
 					f.amount -= 1;
-					PlayerProperties.Inst.IncreaseHealth(f.healAmount);
+					PlayerProperties.inst.IncreaseHealth(f.healAmount);
 				}
 			}
 		}

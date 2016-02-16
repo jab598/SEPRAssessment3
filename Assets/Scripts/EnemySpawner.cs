@@ -24,7 +24,12 @@ public class EnemySpawner : MonoBehaviour
 
 
 	private float nextSpawnTime;
-	
+	Transform player;
+
+	void Start () {
+		player = GameObject.FindGameObjectWithTag ("Player").transform;
+	}
+
 	void Update () 
 	{
 
@@ -47,11 +52,15 @@ public class EnemySpawner : MonoBehaviour
 			}
 		}*/
 
-		Vector3 playerDisplacement = this.transform.position - PlayerProperties.Position;
+		//ASSESSMENT 3 update
+		//REMOVED THE CALL TO PLAYERPROPERTIES AS I REMOVED THE GET(VERCTOR3) METHOD
+		//FROM THAT CLASS
 
-		if (playerDisplacement.magnitude < activationRadius && nextSpawnTime <= Time.time) {
+		Vector3 playerDisplacement = this.transform.position - player.position;
+
+		if (playerDisplacement.magnitude < activationRadius && nextSpawnTime <= Time.timeSinceLevelLoad) {
 			SpawnWave();
-			nextSpawnTime = Time.time + spawnPeriod;
+			nextSpawnTime = Time.timeSinceLevelLoad + spawnPeriod;
 		}
 	
 	}

@@ -1,48 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+
+/*
+ * 
+ * All new code
+ * 
+ * */
 
 public class ObjectiveHandler : MonoBehaviour {
 
-	//Singleton method. use ObjectHandler.inst.[etc]
-	private static ObjectiveHandler inst = null;
-	public static ObjectiveHandler instance {
-		get {
-			if (inst == null) {
-				inst =  FindObjectOfType(typeof (ObjectiveHandler)) as ObjectiveHandler;
-			}
-			return inst;
-		}
-	}
+	//Singleton method. use ObjectHandler.instance.[etc]
+	public static ObjectiveHandler inst = null;
 
-	/// <summary>
-	/// The bio chem student object.
-	/// </summary>
-	public GameObject bioChemStudent;
+	public Text objectiveText;
 
 	/// <summary>
 	/// List of objectives
 	/// </summary>
-	public static List<Objective> objectives = new List<Objective> ();
+	public List<Objective> objectives = new List<Objective> ();
 
 	//called before Start(), before the scene loads
 	void Awake() {
 		//persist between scenes
 		Object.DontDestroyOnLoad (transform.gameObject);
+		UpdateUI ();
+		if (inst == null) {
+			inst = this;
+		} else {
+			Destroy (this.gameObject);
+		}
 	}
 
 	// Use this for initialization
 	void Start () {
-		//build the mission library
-		Objective coffeObj = new Objective ("getCoffee");;
-		coffeObj.addPart ("collectCoffee");
-		coffeObj.addPart ("returnCoffee");
-		objectives.Add (coffeObj);
-
-		Objective tubeObj = new Objective ("getTube");
-		tubeObj.addPart ("collectTube");
-		tubeObj.addPart ("returnTube");
-		objectives.Add (tubeObj);
+		
 	}
 	
 	// Update is called once per frame
@@ -60,6 +53,7 @@ public class ObjectiveHandler : MonoBehaviour {
 				o.completeNextPart();
 			}
 		}
+		UpdateUI ();
 	}
 
 	/// <summary>
@@ -73,6 +67,7 @@ public class ObjectiveHandler : MonoBehaviour {
 				o.completePart(part);
 			}                        
 		}
+		UpdateUI ();
 	}
 
 	/// <summary>
@@ -94,5 +89,27 @@ public class ObjectiveHandler : MonoBehaviour {
 			}
 		}
 		return comp;
+	}
+
+	/// <summary>
+	/// Updates the UI to show the current objectives and states.
+	/// </summary>
+	public void UpdateUI()
+	{
+		//Ensure that we have an objectiveText object.
+		if (objectiveText == null) {
+			objectiveText = GameObject.FindGameObjectWithTag ("ObjectiveTextHolder").GetComponent<Text> ();
+		}
+		string text = "";
+		//Build the Text and set it afterwards.
+		foreach (Objective o in objectives)
+		{
+			//E.G Make Tea : Completed
+			text +=  o.name + " : " + (o.complete ? " Completed " : " Incomplete ");
+			text += "\n";
+		}
+		
+		objectiveText.text = text;
+		
 	}
 }

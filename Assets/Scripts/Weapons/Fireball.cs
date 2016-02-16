@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Fireball : Weapon {
 
-	public float fireballSpeed;
-
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +20,9 @@ public class Fireball : Weapon {
 	void OnCollisionEnter2D(Collision2D c) {
 		if (c.gameObject.GetComponent<SimpleHP> () != null) {
 			c.gameObject.GetComponent<SimpleHP> ().alterHealth(-weaponDamage);
+		}
+		if (!(c.transform.tag == "Player" || c.transform.tag == "Weapon")) {
+			Destroy (this.gameObject);
 		}
 	}
 }

@@ -1,8 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
-public class Objective : MonoBehaviour {
+/*
+ * 
+ * All new code
+ * 
+ * */
+
+public class Objective {
 
 	/// <summary>
 	/// Name of the objective
@@ -14,27 +21,44 @@ public class Objective : MonoBehaviour {
 	/// </summary>
 	public bool complete = false;
 
+	public int currentStage = 0;
+
 	/// <summary>
 	/// <String,Bool> dictionary of parts of the mission.
 	/// When all values are true, the mission is complete.
 	/// </summary>
-	public Dictionary<string,bool> parts;
+	public Dictionary<string,bool> parts = new Dictionary<string,bool> ();
 
 	//Initialise
 	public Objective(string nm) {
 		name = nm;
+		ObjectiveHandler.inst.UpdateUI ();
+	}
+
+	void Awake() {
+
 	}
 
 	/// <summary>
 	/// Completes the next part of this objective
 	/// </summary>
 	public void completeNextPart() {
-		foreach(string s in parts.Keys) {
+		string[] keyList = parts.Keys.ToArray ();
+		foreach (string s in keyList) {
+			Debug.Log ("looking up part " + s);
 			if(parts[s] == false) {
+				Debug.Log ("Part " + s + " was false; setting to true");
 				parts[s] = true;
+				Debug.Log ("Part " + s + " now is " + parts[s]);
+				checkComplete();
 				break;
 			}
-		}
+		}/*
+		Debug.Log ("All parts: ");
+		foreach(bool b in parts.Values) {
+			Debug.Log (b);
+		}*/
+		ObjectiveHandler.inst.UpdateUI ();
 	}
 
 	/// <summary>
@@ -43,7 +67,10 @@ public class Objective : MonoBehaviour {
 	public void checkComplete() {
 		if (!parts.ContainsValue (false)) {
 			complete = true;
+			Debug.Log (name + " completed");
+			PlayerProperties.inst.Score += 100;
 		}
+		ObjectiveHandler.inst.UpdateUI ();
 	}
 
 	/// <summary>
@@ -55,6 +82,7 @@ public class Objective : MonoBehaviour {
 		if (!parts.ContainsKey (s)) {
 			parts [s] = c;
 		}
+		ObjectiveHandler.inst.UpdateUI ();
 	}
 
 	/// <summary>
@@ -64,10 +92,12 @@ public class Objective : MonoBehaviour {
 	public void completePart(string s) {
 		if (parts.ContainsKey (s)) {
 			parts [s] = true;
+			currentStage++;
 			checkComplete();
 		} else {
 			Debug.Log ("The part " + s + " does not exist in the mission " + name);
 		}
+		ObjectiveHandler.inst.UpdateUI ();
 	}
 
 }

@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 using System.Collections;
+
+/*
+ * 
+ * Updated for SceneManager.SwitchScene
+ * 
+ * */
 
 public class SceneSwitcher : MonoBehaviour 
 {
@@ -9,6 +15,9 @@ public class SceneSwitcher : MonoBehaviour
 	/// </summary>
 	public string sceneName;
 
+	/// <summary>
+	/// The required state of the player.
+	/// </summary>
 	public string requiredPlayerState;
 
 	void OnTriggerEnter2D(Collider2D other) 
@@ -16,9 +25,9 @@ public class SceneSwitcher : MonoBehaviour
 		//If player collides, save the name of this object
 		//and change the scene.
 		if (other.transform.tag == "Player") {
-			if(PlayerProperties.Inst.curState == requiredPlayerState || requiredPlayerState == "") {
+			if(PlayerProperties.inst.curState == requiredPlayerState || requiredPlayerState == "") {
 				PlayerPrefs.SetString ("WarpName", gameObject.name);
-				Application.LoadLevel (sceneName);
+				SceneManager.LoadScene (sceneName);
 			}
 		}
 	}

@@ -7,6 +7,11 @@ TagManager:
   - water
   - ground
   - UI
+  - ObjectiveTextHolder
+  - WeaponUIText
+  - Statics
+  - Weapon
+  - pointsText
   layers:
   - Default
   - TransparentFX
@@ -17,10 +22,10 @@ TagManager:
   - 
   - 
   - Background
-  - 
-  - 
-  - 
-  - 
+  - Projectile
+  - Player
+  - Monster
+  - Terrain
   - 
   - 
   - 
