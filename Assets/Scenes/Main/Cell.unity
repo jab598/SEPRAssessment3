@@ -540,6 +540,10 @@ Prefab:
       propertyPath: m_Name
       value: Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 178634, guid: 00ef22a002caf4ac79d9dfc44de9938f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 21272878, guid: 00ef22a002caf4ac79d9dfc44de9938f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 00ef22a002caf4ac79d9dfc44de9938f, type: 2}
@@ -672,7 +676,9 @@ MonoBehaviour:
   curState: 
   DificultyLevel: 0
   defaultHealth: 100
+  healthMultiplier: 1
   hitSound: {fileID: 8300000, guid: 978cd86e39884428085eb63886781475, type: 3}
+  protectionAmount: 0
   healthUI: {fileID: 776583336}
   pointsText: {fileID: 1365290990}
 --- !u!1 &1140158671

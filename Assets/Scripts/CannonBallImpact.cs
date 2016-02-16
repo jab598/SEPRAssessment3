@@ -13,6 +13,7 @@ public class CannonBallImpact : MonoBehaviour {
 	
 	}
 
+	//hit a player, add damage.
 	void OnTriggerEnter2D(Collider2D coll){
 		if (!coll.isTrigger)
 		{

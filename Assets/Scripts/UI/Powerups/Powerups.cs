@@ -47,14 +47,20 @@ public class Powerups : MonoBehaviour
 	}
 
 	public void OnLevelWasLoaded() {
+		//readds powerups at the start of each level.
 		foreach (Powerup p in enabledPowerups)
 		{
 			p.Enabled();
 		}
 	}
 
+	/// <summary>
+	/// Enables the powerup.
+	/// </summary>
+	/// <param name="index">Index of powerup to activate.</param>
 	public void EnablePowerup(int index)
 	{
+		//flag to add all powerups
 		if (index == 1000) {
 			enabledPowerups.Clear ();
 			foreach (Powerup p in allPowerups) {
@@ -63,6 +69,7 @@ public class Powerups : MonoBehaviour
 				enabledPowerups.Add (p);
 			}
 		} else {
+			//else add the one weve asked for
 			allPowerups [index].available = true;
 			allPowerups [index].Enabled ();
 			enabledPowerups.Add (allPowerups [index]);
@@ -73,6 +80,10 @@ public class Powerups : MonoBehaviour
 		//FloatingTextManager.MakeFloatingText (transform, powerup.description, Color.blue, 2.0f);
 	}
 
+	/// <summary>
+	/// Disables a powerup.
+	/// </summary>
+	/// <param name="name">Name of powerup.</param>
 	public void DisablePowerup(string name)
 	{
 		var powerup = FindPowerup (name);
@@ -81,6 +92,11 @@ public class Powerups : MonoBehaviour
 		enabledPowerups.Remove(powerup);
 	}
 
+	/// <summary>
+	/// Finds a powerup.
+	/// </summary>
+	/// <returns>The powerup.</returns>
+	/// <param name="name">Name of powerup.</param>
 	public Powerup FindPowerup(string name)
 	{
 		foreach (Powerup p in allPowerups)

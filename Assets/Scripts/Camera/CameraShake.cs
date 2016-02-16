@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * 
+ * Not using this in assessment 3
+ * 
+ * */
+
 
 /// <summary>
 /// Shakes when Shake is called.

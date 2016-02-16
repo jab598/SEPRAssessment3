@@ -15,6 +15,9 @@ public class SceneSwitcher : MonoBehaviour
 	/// </summary>
 	public string sceneName;
 
+	/// <summary>
+	/// The required state of the player.
+	/// </summary>
 	public string requiredPlayerState;
 
 	void OnTriggerEnter2D(Collider2D other) 

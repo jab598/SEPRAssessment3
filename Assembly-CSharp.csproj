@@ -84,6 +84,7 @@
      <Compile Include="Assets\Scripts\PauseManager.cs" />
      <Compile Include="Assets\Scripts\PlayerProperties.cs" />
      <Compile Include="Assets\Scripts\PowerupPickup.cs" />
+     <Compile Include="Assets\Scripts\ProtectionPowerup.cs" />
      <Compile Include="Assets\Scripts\Rotater.cs" />
      <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
      <Compile Include="Assets\Scripts\SelfDestructTimer.cs" />

@@ -16,7 +16,7 @@ public class PlayerProperties : MonoBehaviour {
 
 	public static PlayerProperties inst;
 
-	public static GameObject Player { get { return inst.gameObject; } }
+	//public static GameObject Player { get { return inst.gameObject; } }
 
 	public static Vector3 Position  
 	{
@@ -43,6 +43,8 @@ public class PlayerProperties : MonoBehaviour {
 	float shealth;//startHealth
 	public float healthMultiplier = 1.0f;
 	public AudioClip hitSound;
+
+	public float protectionAmount;
 
 	private AudioSource _audioSource;
 	private float _health = 0;
@@ -85,6 +87,7 @@ public class PlayerProperties : MonoBehaviour {
 	}
 
 	void OnLevelWasLoaded() {
+		//reassign UI elements as they arent singleton for some reason.
 		healthUI = GameObject.FindGameObjectWithTag ("UI").GetComponent<DuckUI> ();
 		pointsText = GameObject.FindGameObjectWithTag ("pointsText").GetComponent<Text> ();
 		_audioSource = GetComponent<AudioSource> ();
@@ -95,23 +98,24 @@ public class PlayerProperties : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		//keep ui up to date
 		healthUI.maxHealth = (int)Mathf.Floor (defaultHealth);
 
 		healthUI.SetHealth ( (int)Mathf.Floor (_health ) );
 
+		//if we are dead then we die
 		if (_health < 1) 
 		{
 			Die();
 		}
-
-		if (Input.GetKeyDown (KeyCode.H)) 
-		{
-			_health = defaultHealth;
-		}
+		//keep health updated
 		defaultHealth = shealth * healthMultiplier;
 		//≥≤Debug.Log (Time.time + "    " + this.gameObject + _score);
 	}
 
+	/// <summary>
+	/// kills player
+	/// </summary>
 	void Die()
 	{
 		GameObject instance  = (GameObject)Instantiate(Resources.Load("PlayerDieEffect"));
@@ -122,19 +126,23 @@ public class PlayerProperties : MonoBehaviour {
 	
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
+		//take damage when we hit an enemy
+		//usnig name.startswith is a VERY VERY VERY unreliable way to do this.
 		if (coll.gameObject.name.StartsWith("Enemy")) {
 			TakeDamage (50);
 			_audioSource.PlayOneShot(hitSound);
+			//dont know where this broadcast statement goes. 
+			//It is undocumented
 			coll.gameObject.BroadcastMessage("Hit");
 		}
 	}
 
-
+	//not used
 	private string DamageString(float amount)
 	{
 		return ((int)Mathf.Floor (amount)).ToString ();
 	}
-
+	//not used in assessment 3
 	private void MakeDamageText(float amount)
 	{
 		if (amount != 0)
@@ -153,7 +161,10 @@ public class PlayerProperties : MonoBehaviour {
 			//FloatingTextManager.MakeFloatingText (transform, text, color);
 		}
 	}
-
+	/// <summary>
+	/// Takes some damage.
+	/// </summary>
+	/// <param name="amount">Amount to take.</param>
 	public void TakeDamage(float amount)
 	{
 		//MakeDamageText (-amount);
@@ -162,13 +173,13 @@ public class PlayerProperties : MonoBehaviour {
 			Dead ();
 		}
 	}
-
+	//increases player health
 	public void IncreaseHealth(float amount)
 	{
-		MakeDamageText (amount);
+		//MakeDamageText (amount);
 		_health += amount;
 	}
-
+	//assessment2 thing
 	void SaveProperties()
 	{
 		PlayerPrefs.SetFloat ("health"		,_health);
@@ -176,17 +187,20 @@ public class PlayerProperties : MonoBehaviour {
 
 		PlayerPrefs.Save ();
 	}
-
+	//assessment2 thing
 	public void SceneSwitch()
 	{
 		SaveProperties ();
 	}
-
+		//assessment2 thing
 	void OnApplicationQuit() 
 	{
 		SaveProperties ();
 	}
 
+	/// <summary>
+	/// player dead.
+	/// </summary>
 	void Dead() {
 		SceneManager.LoadScene ("Cell");
 		Destroy (GameObject.FindGameObjectWithTag ("Statics"));
