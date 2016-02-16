@@ -88,11 +88,16 @@ public class PlayerProperties : MonoBehaviour {
 
 	void OnLevelWasLoaded() {
 		//reassign UI elements as they arent singleton for some reason.
-		healthUI = GameObject.FindGameObjectWithTag ("UI").GetComponent<DuckUI> ();
-		pointsText = GameObject.FindGameObjectWithTag ("pointsText").GetComponent<Text> ();
+		if (GameObject.FindGameObjectWithTag ("UI") != null) {
+			healthUI = GameObject.FindGameObjectWithTag ("UI").GetComponent<DuckUI> ();
+		}
+		if (GameObject.FindGameObjectWithTag ("pointsText") != null) {
+			pointsText = GameObject.FindGameObjectWithTag ("pointsText").GetComponent<Text> ();
+			pointsText.text = _score.ToString();
+		}
 		_audioSource = GetComponent<AudioSource> ();
 		DificultyLevel = PlayerPrefs.GetInt ("difficulty");
-		pointsText.text = _score.ToString();
+
 	}
 	
 	// Update is called once per frame
