@@ -35,22 +35,49 @@ public class PlayerProperties : MonoBehaviour {
 
 	public Color explodeColor;
 
+	/// <summary>
+	/// Current player state
+	/// </summary>
 	public string curState;
 
 	public int DificultyLevel;
 
+	/// <summary>
+	/// The default health.
+	/// </summary>
 	public float defaultHealth = 100;
 	float shealth;//startHealth
+
+	/// <summary>
+	/// The health multiplier.
+	/// </summary>
 	public float healthMultiplier = 1.0f;
 	public AudioClip hitSound;
 
+	/// <summary>
+	/// The protection amount.
+	/// </summary>
 	public float protectionAmount;
 
+	/// <summary>
+	/// The audio source.
+	/// </summary>
 	private AudioSource _audioSource;
+
+	/// <summary>
+	/// Current health
+	/// </summary>
 	private float _health = 0;
 
+	/// <summary>
+	/// The score.
+	/// </summary>
 	private int _score;
 
+	/// <summary>
+	/// Gets or sets the score.
+	/// </summary>
+	/// <value>The score.</value>
 	public int Score 
 	{ 
 		get
@@ -66,11 +93,18 @@ public class PlayerProperties : MonoBehaviour {
 		} 
 	}
 
+	/// <summary>
+	/// The health UI.
+	/// </summary>
 	public DuckUI healthUI;
 
+	/// <summary>
+	/// The points text.
+	/// </summary>
 	public Text pointsText;
 
 	void Awake() {
+		//singleton
 		if (inst == null) {
 			inst = this;
 		}
@@ -80,6 +114,7 @@ public class PlayerProperties : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		//assigns initial values
 		_health = defaultHealth;
 		_audioSource = GetComponent<AudioSource> ();
 		DificultyLevel = PlayerPrefs.GetInt ("difficulty");
